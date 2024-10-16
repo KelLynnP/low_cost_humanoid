@@ -1,5 +1,13 @@
 # Runtime Documentation
 
+## Prerequisites:
+- [Balena Etche](https://etcher.balena.io/#download-etcher)
+- Docker
+- Gitlab CLI
+```shell
+  gitlab-cli-local 
+```
+
 ## Setup
 
 1. Flash the Image to the SD Card
@@ -37,6 +45,12 @@ SSH:
 `ssh root@192.168.42.1`
 
 4. Build Runtime
+
+Run on the first build! 
+```bash
+gitlab-ci-local build-toolchain  
+```
+
 ```bash
 cargo check && gitlab-ci-local # check and build
 ```
